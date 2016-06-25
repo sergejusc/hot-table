@@ -6,6 +6,7 @@
   ;
 
   publicProperties = publicProperties.concat(publicOptions, publicHooks);
+  publicProperties.push('removeRowPlugin');
 
   /**
    * @constructor
