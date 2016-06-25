@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
-    "handsontable": "~0.24.0"
+    "handsontable": "git@github.com:sergejusc/handsontable.git#my"
   },
   "devDependencies": {
     "google-map": "GoogleWebComponents/google-map#^1.1.7"
