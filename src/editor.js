@@ -1,4 +1,6 @@
 (function(w) {
+  if (isMobileBrowser()) return;
+
   var BaseEditor = Handsontable.editors.BaseEditor;
 
   function Editor(hotInstance) {

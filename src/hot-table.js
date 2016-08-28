@@ -1,4 +1,6 @@
 (function() {
+  if (isMobileBrowser()) return;
+
   var
     settingsParser = new HotTableUtils.SettingsParser(),
     lastSelectedCellMeta;
@@ -22,6 +24,8 @@
      * On create element but not attached to DOM
      */
     created: function() {
+      if (isMobileBrowser()) return;
+
       this.activeNestedTable = null;
       this.nestedTables = null;
       this.destroyed = false;
@@ -39,6 +43,8 @@
      * On attached element to DOM
      */
     attached: function() {
+      if (isMobileBrowser()) return;
+
       this.$.htContainer.parentNode.replaceChild(this.hotRootElement, this.$.htContainer);
 
       this.async(function() {
@@ -80,6 +86,8 @@
      * Register hooks
      */
     registerHooks: function() {
+      if (isMobileBrowser()) return;
+
       var _this = this;
 
       if (!Handsontable.dom.isChildOfWebComponentTable(this.parentNode)) {

@@ -1,4 +1,6 @@
 (function() {
+  if (isMobileBrowser()) return;
+
   var
     settingsParser = new HotTableUtils.SettingsParser();
 

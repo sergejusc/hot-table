@@ -1,4 +1,6 @@
 (function(w) {
+  if (isMobileBrowser()) return;
+
   var
     publicHooks = Handsontable.hooks.getRegistered(),
     publicOptions = Object.keys(Handsontable.DefaultSettings.prototype),
