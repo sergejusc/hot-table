@@ -102,7 +102,7 @@ YOU SHALL OBTAIN A COMMERCIAL LICENSE FOR THIS SOFTWARE AT HANDSONTABLE.COM.
 .handsontable td {
   border-top-width: 0;
   border-left-width: 0;
-  border-right: 1px solid red; /* HEADER */
+  border-right: 1px solid #BDBDBD; /* HEADER */
 /*  border-bottom: 1px solid #CCC;*/
   height: 22px;
   empty-cells: show;
@@ -127,7 +127,7 @@ YOU SHALL OBTAIN A COMMERCIAL LICENSE FOR THIS SOFTWARE AT HANDSONTABLE.COM.
 
 .handsontable th:last-child {
   /*Foundation framework fix*/
-  border-right: 1px solid red; /* HEADER */
+  border-right: 1px solid #BDBDBD; /* HEADER */
 /*  border-bottom: 1px solid rgba(0, 0, 0, 0);*/
 }
 
@@ -144,7 +144,7 @@ YOU SHALL OBTAIN A COMMERCIAL LICENSE FOR THIS SOFTWARE AT HANDSONTABLE.COM.
 .handsontable td:first-of-type,
 .handsontable .htNoFrame + th,
 .handsontable .htNoFrame + td {
-  border-left: 1px solid red; /* HEADER */
+  border-left: 1px solid #BDBDBD; /* HEADER */
 }
 
 .handsontable.htRowHeaders thead tr th:nth-child(2) {
@@ -153,7 +153,20 @@ YOU SHALL OBTAIN A COMMERCIAL LICENSE FOR THIS SOFTWARE AT HANDSONTABLE.COM.
 
 .handsontable tr:first-child th,
 .handsontable tr:first-child td {
-  border-top: 1px solid red; /* HEADER */
+  border-top: 1px solid #BDBDBD; /* HEADER */
+}
+
+.handsontable tr th,
+.handsontable tr td {
+  border-bottom: 1px solid #EEEEEE; /* HEADER */
+
+  white-space: nowrap !important;
+  overflow: hidden;
+}
+
+.handsontable tr:last-child th,
+.handsontable tr:last-child td {
+  border-bottom: 1px solid #BDBDBD; /* HEADER */
 }
 
 .ht_master:not(.innerBorderLeft) ~ .handsontable tbody tr th,
@@ -1929,6 +1942,34 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .ht_clone_left {
   display: none;
 }
+
+.handsontable td div {
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+
+.handsontable td div.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
+
+  margin: 0 -4px 0 -4px;
+  padding: 0 4px 0 4px;
+}
+
+.handsontable td .desc-error0 {
+  background-color: #FF8A65;
+}
+
+.handsontable td .desc-error1 {
+  background-color: #FFCC80;
+}
+
+.handsontable td .desc-error2 {
+  background-color: #FFF9C4;
+}
+
 
         </style>
     </template>
