@@ -99,6 +99,8 @@
         });
       }
       this.hot.addHook('afterModifyTransformStart', this.onAfterModifyTransformStart.bind(this));
+      this.hot.addHook('afterChange', this.onAfterChange.bind(this));
+      this.hot.addHook('afterRemoveRow', this.onAfterChange.bind(this));
       this.hot.addHook('beforeKeyDown', this.onBeforeKeyDown.bind(this));
       this.hot.addHook('afterDeselect', function() {
         _this.highlightedRow = -1;
@@ -263,6 +265,10 @@
         settings = settingsParser.parse(this);
         this.hot.updateSettings(settings);
       }
-    }
+    },
+
+    onAfterChange: function() {
+      this.fire('data-changed', {});
+    },
   });
 }());
