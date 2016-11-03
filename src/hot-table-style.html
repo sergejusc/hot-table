@@ -1943,9 +1943,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   display: none;
 }
 
-.handsontable td div {
+.handsontable td, .handsontable td div {
   overflow: hidden;
   text-overflow: ellipsis !important;
+  white-space: nowrap;
 }
 
 .handsontable td div.desc {
